@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inventory Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+<!-- Profile Info -->
+<div class="row">
+  <div class="column1">
+    <div class="card1">
+      <img class="profile__pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxfhSwxPgd-EjlLQ2ZtGtoGIDsanNh5qOuhw&usqp=CAU" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Name</h2>
+        <p class="title">Admin</p>
+        <p>Last log in time:</p>
+        <p><button class="button">Edit Profile</button></p>
+        <p><button class="button">Log Out</button></p>
+      </div>
+    </div>
+  </div>
+<!-- Clock -->
+  <div class="column2">
+    <div class="card1">
+      <div class="container">
+        <p class="clock__text">Welcome,user</p>
+        <div class="clock__container">
+            <div id="clock"></div>
+        </div>
+      </div>
+    </div>
+      <!-- Options -->
+    <div class="card2">
+      
+            <div class="flex-container">
+                <div><p>Stored Products</p></div>
+                <div><p>Add Products</p></div>
+                <div><p>Stock-out Products</p></div>  
+            </div>
+
+            <div class="flex-container">
+                <div><p>Sale</p></div>
+                <div><p>Purchase</p></div>
+                <div><p>Billing System</p></div>
+            </div>
+    
+    </div>
+  </div>
+</div>
+
+<script src={% static 'js/index.js' %}></script>
+</body>
+</html>

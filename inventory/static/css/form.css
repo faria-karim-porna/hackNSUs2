@@ -1,0 +1,81 @@
+*
+{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+}
+body
+{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.contact-container
+{margin: 10% 0;
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    max-width: 90%;
+    border: 3px solid #66ff99;
+}
+/* Left side Design*/
+.contact-left
+{
+    width: 100%;
+    padding: 20px;
+    color:  #66ff99;
+    text-align: center;
+}
+.contact-form
+{
+    margin-top: 10px;
+    width: 100%;
+}
+.single-row
+{
+    display: flex;
+    justify-content: space-between;
+}
+.form-in
+{
+    padding: 0.5em;
+    font-size: 14px;
+    width: 100%;
+    resize: vertical;
+    margin-top: 1em;
+    background: black;
+    border: none;
+    color: #66ff99;
+    border-bottom: 1px solid #66ff99;
+}
+.single-row + input
+{
+margin: 0 10px;
+}
+.ml
+{
+    margin-left: 10px;
+}
+.mr
+{
+    margin-right: 10px;
+}
+::placeholder {
+    color: #66ff99 !important;
+    opacity: 1;
+  }
+  .signup-btn {
+    text-align: center;
+    color: black;
+    background-color: #66ff99;
+    border-color: #66ff99;
+    transition: all 0.4s;
+    width:25%;
+    margin-top: 1% !important;
+    margin:0 auto;
+}
+.signup-btn:hover {
+    background: #66ff99;
+    opacity: 0.8;
+}

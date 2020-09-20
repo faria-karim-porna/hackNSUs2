@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<title>Inventory Management System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% load static %}
+  <link rel="stylesheet" href="{% static 'css/view.css' %}">
+
+<body>
+
+
+<div class="w3-center">
+  <div class="w3-section">
+  <button class="w3-button demo w3-color" onclick="currentDiv(1)">Daily</button> 
+  <button class="w3-button demo w3-color" onclick="currentDiv(2)">Weekly</button> 
+  <button class="w3-button demo w3-color" onclick="currentDiv(3)">Monthly</button> 
+</div>
+<div class="w3-content" style="width:100%">
+<!-- Daily Table -->
+  <div class="mySlides class" style="width:100%">
+  <h3>Daily Purchase List</h3>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<table id="myTable">
+  <tr class="header">
+    <th>Supplier Name</th>
+    <th>Supplier Contact no. or Email</th>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Each Price</th>
+    <th>Total Price</th>
+    <th>Purchase Date</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><button class="actions">Yes</button></td>
+    <td><button class="actions">Yes</button></td>
+  </tr>
+</table>
+  </div>
+<!-- Daily Table End-->
+
+<!-- Daily Table -->
+  <div class="mySlides class" style="width:100%">
+  <h3>Weekly Purchase List</h3>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<table id="myTable">
+  <tr class="header">
+    <th>Supplier Name</th>
+    <th>Supplier Contact no. or Email</th>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Each Price</th>
+    <th>Total Price</th>
+    <th>Purchase Date</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+  </div>
+<!-- Daily Table End-->
+
+<!-- Daily Table -->
+  <div class="mySlides class" style="width:100%">
+  <h3>Monthly Purchase List</h3>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<table id="myTable">
+  <tr class="header">
+    <th>Supplier Name</th>
+    <th>Supplier Contact no. or Email</th>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Each Price</th>
+    <th>Total Price</th>
+    <th>Purchase Date</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+  </div>
+<!-- Daily Table End-->
+  
+  <h1 class="mySlides" style="width:100%">Hello2</h1>
+  <h1 class="mySlides" style="width:100%">Hello3</h1>
+</div>
+<script src={% static 'js/view.js' %}></script>
+</body>
+</html>

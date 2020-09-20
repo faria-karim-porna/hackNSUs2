@@ -1,0 +1,66 @@
+body{
+    background-color: black;
+}
+* {
+    box-sizing: border-box;
+  }
+  /* search style */
+  #myInput {
+    background-color: black;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #66ff99;
+    margin-bottom: 12px;
+    color: #66ff99;
+  }
+::placeholder{
+    color: #66ff99 !important;
+}
+  /* table style */
+  #myTable {
+    background-color: black;
+    color: #66ff99;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #66ff99;
+    font-size: 18px;
+  }
+  
+  #myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+  }
+  
+  #myTable tr {
+    border-bottom: 1px solid #66ff99;
+  }
+  
+  #myTable tr.header, #myTable tr:hover {
+    background-color: #66ff99;
+    color: black;
+  }
+/* slide style */
+.mySlides {
+  display:none
+}
+.w3-color{
+  background-color: #66ff99 !important;
+  color: black !important;
+}
+.demo{
+  color: #66ff99;
+  border: 1px solid #66ff99;
+}
+h3{
+  text-align: center;
+  color: #66ff99;
+}
+.actions{
+  background-color: black;
+  color: #66ff99;
+  border: 1px solid #66ff99;
+  padding: 5px 10px;
+}
