@@ -22,27 +22,27 @@
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 <table id="myTable">
   <tr class="header">
-    <th>Supplier Name</th>
-    <th>Supplier Contact no. or Email</th>
+    <th>Buyer Name</th>
+    <th>Buyer Contact no. or Email</th>
     <th>Product</th>
     <th>Quantity</th>
     <th>Each Price</th>
     <th>Total Price</th>
-    <th>Purchase Date</th>
-    <th>Update</th>
-    <th>Delete</th>
+    <th>Sale Date</th>
+    {% comment %} <th>Update</th>
+    <th>Delete</th> {% endcomment %}
   </tr>
-  {% for purchase in purchases%}
+  {% for sale in sales%}
   <tr>
-    <td>{{purchase.psupplier}}</td>
-    <td>{{purchase.psupplier_contact}}</td>
-    <td>{{purchase.pproduct_category}} {{purchase.pproduct_brand}} {{purchase.pproduct_name}}</td>
-    <td>{{purchase.pquantity}}</td>
-    <td>{{purchase.peach_price}}</td>
-    <td>{{purchase.ptotal_price}}</td>
-    <td>{{purchase.ppurchase_date}}</td>
-    <td><a href="/purchase_edit/{{purchase.id}}"><button class="actions">Yes</button></td></a>
-    <td><a href="/purchase_delete/{{purchase.id}}"><button class="actions">Yes</button></a></td>
+    <td>{{sale.sbuyer}}</td>
+    <td>{{sale.sbuyer_contact}}</td>
+    <td>{{sale.sproduct_category}} {{sale.sproduct_brand}} {{sale.sproduct_name}}</td>
+    <td>{{sale.squantity}}</td>
+    <td>{{sale.seach_price}}</td>
+    <td>{{sale.stotal_price}}</td>
+    <td>{{sale.spurchase_date}}</td>
+    {% comment %} <td><a href="/purchase_edit/{{purchase.id}}"><button class="actions">Yes</button></td></a>
+    <td><a href="/purchase_delete/{{purchase.id}}"><button class="actions">Yes</button></a></td> {% endcomment %}
   </tr>
   {% endfor %}
 </table>
@@ -55,8 +55,8 @@
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 <table id="myTable">
   <tr class="header">
-    <th>Supplier Name</th>
-    <th>Supplier Contact no. or Email</th>
+    <th>Buyer Name</th>
+    <th>Buyer Contact no. or Email</th>
     <th>Product</th>
     <th>Quantity</th>
     <th>Each Price</th>
@@ -84,8 +84,8 @@
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 <table id="myTable">
   <tr class="header">
-    <th>Supplier Name</th>
-    <th>Supplier Contact no. or Email</th>
+    <th>Buyer Name</th>
+    <th>Buyer Contact no. or Email</th>
     <th>Product</th>
     <th>Quantity</th>
     <th>Each Price</th>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>Inventory Management System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% load static %}
+  <link rel="stylesheet" href="{% static 'css/view.css' %}">
+
+<body>
+
+
+<div class="w3-center">
+  
+<div class="w3-content" style="width:100%">
+<!-- Daily Table -->
+  <div class="mySlides class" style="width:100%">
+  <h3>Stored Product List</h3>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<table id="myTable">
+  <tr class="header">
+    <th>Product</th>
+    <th>Each Price</th>
+    <th>Quantity</th>
+  </tr>
+  {% for stored_product in stored_products%}
+  <tr>
+    <td>{{stored_product.spproduct_category}} {{stored_product.spproduct_brand}} {{stored_product.spproduct_name}}</td>
+    <td>{{stored_product.speach_price}}</td>
+    <td>{{stored_product.spquantity}}</td>
+  </tr>
+  {% endfor %}
+</table>
+  </div>
+<!-- Daily Table End-->
+</div>
+<script src={% static 'js/view.js' %}></script>
+</body>
+</html>

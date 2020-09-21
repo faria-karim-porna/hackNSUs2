@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+
+<p>Click the button to return the number of cells in the table's first row.</p>
+
+<table id="myTable">
+  <tr>
+    <td>cell 1</td>
+    <td>cell 2</td>
+    <td>cell 1</td>
+    <td>cell 2</td>
+  </tr>
+  <tr>
+  <td>cell 1</td>
+    <td>cell 2</td>
+  </tr>
+</table>
+<br> 
+
+<button>Try it</button>
+
+<script>
+var x = document.getElementById("myTable").rows[1].cells.length;
+document.getElementById("demo").innerHTML = "Found " + x + " cells in the first tr element.";
+
+</script>
+
+</body>
+</html>

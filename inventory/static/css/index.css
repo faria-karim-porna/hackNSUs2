@@ -52,8 +52,7 @@ html {
     content: "";
     clear: both;
     display: table;
-  }
-  
+  }  
   .title {
     color: #66ff99;
   }
@@ -116,15 +115,16 @@ html {
   .flex-container > div:hover {
     transform: scale(1.2);
   }
-  .flex-container > div >p{
+  .flex-container > div >p>a{
     text-align: center;
     font-size: 25px;
     margin-top: 25%;
     padding: 2%;
     font-weight: 5px;
+    color: black !important;
   }
   @media only screen and (max-width: 600px){
-    .flex-container > div >p{
+    .flex-container > div >p>a{
         text-align: center;
         font-size: 15px;
         margin-top: 25%;

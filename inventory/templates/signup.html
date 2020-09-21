@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Inventory Management System</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% load static %}
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+
+<div class="signup-form">
+    <form form method = "POST" action="/signup">
+    {% csrf_token %}
+		<p class="hint-text">Create an account</p>
+		
+        <div class="form-group">
+        	<input type="text" class="form-control input-lg" name="username" placeholder="User Name" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control input-lg" name="firstname" placeholder="First Name" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control input-lg" name="lastname" placeholder="Last Name" required="required">
+        </div>
+		<div class="form-group">
+        	<input type="email" class="form-control input-lg" name="email" placeholder="Email" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control input-lg" name="confirm_password" placeholder="Confirm Password" required="required">
+        </div>  
+        <div class="form-group">
+            <button type="submit" class="btn btn-lg btn-block signup-btn">Create an account</button>
+        </div>
+        <div class="text-center">Already have an account? <a href="#">Login</a></div>
+    </form>
+    
+</div>
+</body>
+</html>

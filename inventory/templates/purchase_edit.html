@@ -13,24 +13,21 @@
 <body>
 <div class="contact-container">
   <div class="contact-left">
-    <h2>Add Products</h2>
-    <form class="contact-form" form method = "POST" action="method = "POST" class = "post-form" action="/update/{{employee.id}}">
+    <h2>Update Purchased Products</h2>
+    <form class="contact-form" method = "POST" class = "post-form" action="/purchase_update/{{purchase.id}}">
     {% csrf_token %}
       <div class="single-row">
-          <input type="text" placeholder="Supplier Name" class="form-in mr" value="{{purchase.psupplier}}"/>
-          <input type="text" placeholder="Supplier Contact No. or Email"class="form-in ml" value="{{purchase.psupplier_contact}}"/>
+          <input type="text" placeholder="Supplier Name" class="form-in mr" name="psupplier" value="{{purchase.psupplier}}"/>
+          <input type="text" placeholder="Supplier Contact No. or Email"class="form-in ml" name="psupplier_contact" value="{{purchase.psupplier_contact}}"/>
       </div>
       <div class="single-row">
-          <input type="text" placeholder="Category" class="form-in mr" value="{{purchase.pproduct_category}}" required/>
-          <input type="text" placeholder="Brand Name"class="form-in ml" value="{{purchase.pproduct_brand}}" required/>
-          <input type="text" placeholder="Product Name"class="form-in ml" value="{{purchase.pproduct_name}}" required/>
+          <input type="text" placeholder="Category" class="form-in mr" name="pproduct_category" value="{{purchase.pproduct_category}}" required/>
+          <input type="text" placeholder="Brand Name"class="form-in ml" name="pproduct_brand" value="{{purchase.pproduct_brand}}" required/>
+          <input type="text" placeholder="Product Name"class="form-in ml" name="pproduct_name" value="{{purchase.pproduct_name}}" required/>
       </div>
       <div class="single-row">
-          <input type="text" placeholder="Quantity" class="form-in mr" value="{{purchase.pquantity}}" required/>
-          <input type="text" placeholder="Each Price"class="form-in ml" value="{{purchase.peach_price}}" required/>
-      </div>
-      <div class="single-row">
-          <input type="text" placeholder="Purchase Date" class="form-in mr" value="{{purchase.ppurchase_date}}" required/>
+          <input type="text" placeholder="Quantity" class="form-in mr" name="pquantity" value="{{purchase.pquantity}}" required/>
+          <input type="text" placeholder="Each Price"class="form-in ml" name="peach_price" value="{{purchase.peach_price}}" required/>
       </div>
       <div class="form-group">
             <button type="submit" class="btn btn-lg btn-block signup-btn">Submit</button>

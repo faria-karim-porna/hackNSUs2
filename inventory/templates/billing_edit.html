@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inventory Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/form.css' %}">
+</head>
+<body>
+<div>
+</div>
+<div class="contact-container">
+  <div class="contact-left">
+    <h2>Add Products For Sale</h2>
+    <form class="contact-form" form method = "POST" action="/billing_update/{{billing_product.id}}">
+    {% csrf_token %}
+      <div class="single-row">
+          <input type="text" placeholder="Buyer Name" class="form-in mr" name="sbuyer"></input>
+          <input type="text" placeholder="Buyer Contact No. or Email"class="form-in ml" name="sbuyer_contact"></input>
+      </div>
+      <div class="single-row">
+          <input type="text" placeholder="Category" class="form-in mr" name="spproduct_category" value="{{billing_product.spproduct_category}}" required/>
+          <input type="text" placeholder="Brand Name"class="form-in ml" name="spproduct_brand" value="{{billing_product.spproduct_brand}}" required/>
+          <input type="text" placeholder="Product Name"class="form-in ml" name="spproduct_name" value="{{billing_product.spproduct_name}}" required/>
+      </div>
+      <div class="single-row">
+          <input type="text" placeholder="Quantity" class="form-in mr" name="squantity" required></input>
+          <input type="text" placeholder="Product Name"class="form-in ml" name="speach_price" value="{{billing_product.speach_price}}" required/>
+      </div>
+      <div class="form-group">
+            <button type="submit" class="btn btn-lg btn-block signup-btn">Submit</button>
+        </div>   
+    </form>
+  </div>
+  </div>
+</div>
+
+
+</body>
+</html>

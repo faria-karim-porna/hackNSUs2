@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>Inventory Management System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% load static %}
+  <link rel="stylesheet" href="{% static 'css/view.css' %}">
+
+<body>
+
+
+<div class="w3-center">
+  
+<div class="w3-content" style="width:100%">
+<!-- Daily Table -->
+  <div class="mySlides class" style="width:100%">
+  <h3>Billing System</h3>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<table id="myTable">
+  <tr class="header">
+    <th>Product</th>
+    <th>Each Price</th>
+    <th>Action</th>
+  </tr>
+  {% for billing_product in billing_products%}
+  <tr>
+    <td>{{billing_product.spproduct_category}} {{billing_product.spproduct_brand}} {{billing_product.spproduct_name}}</td>
+    <td>{{billing_product.speach_price}}</td>
+    <td><a href="/billing_edit/{{billing_product.id}}"><button class="actions">Add</button></td></a>
+  </tr>
+  {% endfor %}
+</table>
+  </div>
+<!-- Daily Table End-->
+</div>
+<script src={% static 'js/view.js' %}></script>
+</body>
+</html>

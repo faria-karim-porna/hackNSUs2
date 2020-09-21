@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<title>Inventory Management System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% load static %}
+  <link rel="stylesheet" href="{% static 'css/view.css' %}">
+  <link rel="stylesheet" href="{% static 'css/alert.css' %}">
+
+<body>
+
+
+<div class="w3-center">
+  
+<div class="w3-content" style="width:100%">
+<!-- Daily Table -->
+  <div class="mySlides class" style="width:100%">
+  <h3>Stock Out Product List</h3>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<table id="myTable">
+  <tr class="header">
+    <th>Product</th>
+    <th>Each Price</th>
+  </tr>
+  {% for stock_out_product in stock_out_products%}
+  <tr>
+    <td>{{stock_out_product.soproduct_category}} {{stock_out_product.soproduct_brand}} {{stock_out_product.soproduct_name}}</td>
+    <td>{{stock_out_product.soeach_price}}</td>
+  </tr>
+  {% endfor %}
+</table>
+  </div>
+
+<!-- Daily Table End-->
+</div>
+<script src={% static 'js/view.js' %}></script>
+<script>
+var x = document.getElementById("myTable").rows[1].cells.length;
+document.getElementById("demo").innerHTML = "Found " + x + " cells in the first tr element.";
+if(x>0)
+{
+  alertArea = document.getElementById("alert");
+  alertArea.style.display = "block";
+}
+
+</script>
+</body>
+</html>
